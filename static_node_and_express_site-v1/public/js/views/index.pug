@@ -1,0 +1,29 @@
+extends layout.pug
+
+block content 
+  article.grid-container.portfolio-intro
+    div
+      //- Heisenbergs web-portfolio
+      h1 Heading
+
+      //- Add a description for your portfolio, what this project is, it's purpose, what it's supposed to accomplish, etc. 
+      p.lead.text-light
+        | Portfolio The portfolio is showcasing various of fun projects. The purpose of the projects is to use various vanilla javascript tools, to showcase some of my skills.
+  article.grid-container.portfolio-index
+    
+    .grid-x.grid-margin-x.small-up-2.medium-up-2.large-up-3
+
+      //- Use the Pug `each` iterator to create a project img, title and link in the markup for each of the projects you are showcasing.  
+      
+      //- Use a combination of interpolation and template literals as needed to dynamically generate the the routes in the href, as well as the img's src and the projects title.
+      
+      //- Here's what the Pug for each project example should look like. 
+      - var projects = [{title: 'Project 1', img: 'https://placehold.it/550x350', link: '/project1'}, {title: 'Project 2', img: 'https://placehold.it/550x550', link: '/project3'},{title: 'Project 3', img: 'https://placehold.it/550x550', link: '/project3'}, {title: 'Project 4', img: 'https://placehold.it/550x550', link: '/project4'}, {title: 'Project 5', img: 'https://placehold.it/550x550', link: '/project5'}]
+
+
+
+      each val, key in projects
+       a(href=val.link)
+         li= "Title " + val.title
+         img.thumbnail(src=val.img)
+      

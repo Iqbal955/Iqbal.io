@@ -12,18 +12,27 @@ app.listen(3000, () => {
 });
 
 
+//index
 
+app.get('/',  (req, res) => {
 
-app.get('/', (req, res) => {
-
-   res.render('<h1>Mic check 123</>');
+   res.render('index.pug');
 
 });
 
 
 app.get('/about', (req, res) => {
 
-    res.render('index.pug');
+    res.render('about.pug');
+
+
+
+});
+
+
+app.get('/project', (req, res) => {
+
+    res.render('project.pug');
 
 
 
