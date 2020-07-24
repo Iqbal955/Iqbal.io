@@ -18,12 +18,11 @@ block content
       //- Use a combination of interpolation and template literals as needed to dynamically generate the the routes in the href, as well as the img's src and the projects title.
       
       //- Here's what the Pug for each project example should look like. 
-      - var projects = [{title: 'Project 1', img: 'https://placehold.it/550x350', link: '/project1'}, {title: 'Project 2', img: 'https://placehold.it/550x550', link: '/project3'},{title: 'Project 3', img: 'https://placehold.it/550x550', link: '/project3'}, {title: 'Project 4', img: 'https://placehold.it/550x550', link: '/project4'}, {title: 'Project 5', img: 'https://placehold.it/550x550', link: '/project5'}]
 
-
-
-      each val, key in projects
+      each val, key in projectinfo
        a(href=val.link)
-         li= "Title " + val.title
-         img.thumbnail(src=val.img)
+         h1
+           li= val.title
+         li= val.desc
+           img.thumbnail(src=val.img)
       
