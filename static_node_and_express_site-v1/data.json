@@ -1,0 +1,63 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "project_name": "Random Quote Generator",
+            "description": "Awesome quotes to motivate you for your next project!",
+            "technologies": [ "Vanilla JavaScript, HTML" ],
+            "live_link": "www.github.com/iqbal955/randomquote",
+            "github_link": "www.github.com/iqbal955/randomquote",
+            "image_urls": [
+                "https://i.imgur.com/lWzeqmZ.png"
+            ]
+        },
+        {
+            "id": 2,
+            "project_name": "Project 2",
+            "description": "Filtering students",
+            "technologies": [ "JavaScript, HTML" ],
+            "live_link": "www.github.com/iqbal955/filterstudents",
+            "github_link": "https://iqbal955.github.io/p2/",
+            "image_urls": [
+                "https://i.imgur.com/adZBSxK.png",
+                "https://i.imgur.com/5XI7W2E.png",
+                "https://i.imgur.com/SrZvrWA.png"
+            ]
+        },
+        {
+            "id": 3,
+            "project_name": "Interactive Form",
+            "description": "Online checkout",
+            "technologies": [ "JavaScript, HTML, CSS" ],
+            "live_link": "www.github.com/iqbal955/OnlineCheckout",
+            "github_link": "https://iqbal955.github.io/p3/",
+            "image_urls": [
+                "https://i.imgur.com/Y5JeZ88.png",
+                "https://i.imgur.com/OduALr4.png",
+                "https://i.imgur.com/rm2Apd9.png"
+            ]
+
+        },
+        {
+            "id": 4,
+            "project_name": "Project 4",
+            "description": "OOB Game",
+            "technologies": [ "OOB JavaScript", "CSS", "HTML" ],
+            "live_link": "www.github.com/iqbal955/OOBGame",
+            "github_link": "https://iqbal955.github.io/p4/",
+            "image_urls": [
+                "https://i.imgur.com/vLcD2Z2.png",
+                "https://i.imgur.com/7FeOETq.png",
+                "https://i.imgur.com/rbVR7qG.png"
+            ]
+        }
+    ]
+
+
+
+
+
+}
+
+
+

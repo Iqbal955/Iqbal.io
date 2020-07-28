@@ -19,10 +19,13 @@ block content
       
       //- Here's what the Pug for each project example should look like. 
 
-      each val, key in projectinfo
-       a(href=val.link)
+      each val in projects
+       a(href=val.id - 1)
          h1
-           li= val.title
-         li= val.desc
-           img.thumbnail(src=val.img)
+           li= val.project_name
+         li= val.description
+         for projectphoto in val.image_urls
+           img.thumbnail(src=`${projectphoto}`)
+
+
       
