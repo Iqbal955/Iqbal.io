@@ -43,33 +43,24 @@ app.use((err, req, res, next) => {
 */
 
 
-// ERROR HANDLERS 404
+// ERROR HANDLER 404
 app.use((req, res, next) => {
-    res.locals.theerror = err;
-
+   
+   //  res.locals.theerror = err; wont i need to define this such that it can be used in pug?
     console.log("404");
     res.status(400).render('error.pug');
-    next(); //passing the error
+   //Wont I need to use a next function so it continues to the next function, or not?
 
 });
 
-// ERROR HANDLERS 500
-app.use((req, res, next) => {
-    res.locals.theerror = err;
 
-    console.log("500");
-    res.status(500).render('error.pug');
-
-    next(); //passing the error to the next middleware
- 
-});
 
 /* Global error handler */
 app.use((err, req, res, next) => {
 
 
 
-    res.locals.theerror = err;
+   res.locals.theerror = err; // wont i need to specify such that it can be used in pug?
 
     if (err) {
         console.log('Global error handler called', err);
@@ -83,7 +74,7 @@ app.use((err, req, res, next) => {
 
     else {
         err.message = 'Oops try again! 505 Error thrown';
-        res.status(500).render('error.pug', { err });
+        res.status(err.message || 500).render('error.pug', { err });
     }
 });
 

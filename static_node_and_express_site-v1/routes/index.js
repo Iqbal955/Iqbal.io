@@ -22,8 +22,6 @@ router.get('/about', (req, res) => {
 router.get('/:id', (req, res, next) => {
     res.locals.projects = projects;
 
-
-        console.log("works");
         // res.locals.projectinfo = projectinfo;
     if (projects[req.params.id]) {
         res.render('project.pug', {
@@ -44,10 +42,12 @@ router.get('/:id', (req, res, next) => {
 
 
 
-        else {
-            const err = new Error('Woops! Page not found');
+    else {
+
+            const err = new Error();
             err.status = 404;
-            next();
+            err.message = 'Woops! Page not found';
+            next(err);
         }
 
 
@@ -57,22 +57,6 @@ router.get('/:id', (req, res, next) => {
 
 });
 
-
-
-
-/*
-router.use((err, req, res, next) => {
-
-    res.locals.theerror = err;
-    res.status(err.status);
-    res.render('error.pug');
-
-
-
-});
-
-
-*/
 
 
 
