@@ -47,7 +47,7 @@ router.get('/:id', (req, res, next) => {
         else {
             const err = new Error('Woops! Page not found');
             err.status = 404;
-            next(err);
+            next();
         }
 
 

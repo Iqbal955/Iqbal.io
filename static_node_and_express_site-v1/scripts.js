@@ -49,7 +49,7 @@ app.use((req, res, next) => {
 
     console.log("404");
     res.status(400).render('error.pug');
-    next(err); //passing the error
+    next(); //passing the error
 
 });
 
@@ -60,7 +60,7 @@ app.use((req, res, next) => {
     console.log("500");
     res.status(500).render('error.pug');
 
-    next(err); //passing the error to the next middleware
+    next(); //passing the error to the next middleware
  
 });
 
