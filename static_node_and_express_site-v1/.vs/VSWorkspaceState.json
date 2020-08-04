@@ -6,8 +6,9 @@
     "\\public\\css",
     "\\public\\js",
     "\\public\\js\\vendor",
+    "\\routes",
     "\\views"
   ],
-  "SelectedNode": "\\views\\about.pug",
+  "SelectedNode": "\\public\\css\\foundation.css",
   "PreviewInSolutionExplorer": false
 }

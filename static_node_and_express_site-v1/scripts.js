@@ -14,11 +14,10 @@ app.use('/', indexRouter);
 
 
 
-
+/*
 app.use((req, res, next) => {
     console.log("in error object");
-    const err = new Error("Woooops! There was an error!");
-    err.status = 500;
+    res.status = 500;
     next(err);
 
 });
@@ -41,9 +40,56 @@ app.use((err, req, res, next) => {
 
 });
 
+*/
+
+
+// ERROR HANDLERS 404
+app.use((req, res, next) => {
+
+
+    console.log("404");
+    res.status(400).render('error.pug');
+    next(err); //passing the error
+
+});
+
+// ERROR HANDLERS 500
+app.use((req, res, next) => {
+
+
+    console.log("500");
+    res.status(500).render('error.pug');
+
+    next(err); //passing the error to the next middleware
+ 
+});
+
+/* Global error handler */
+app.use((err, req, res, next) => {
+
+
+
+    res.locals.theerror = err;
+
+    if (err) {
+        console.log('Global error handler called', err);
+    }
+
+    if (err.status === 400) {
+        res.status(400).render('error.pug', { err });
+
+    }
+
+
+    else {
+        err.message = 'Oops try again! 505 Error thrown';
+        res.status(500).render('error.pug', { err });
+    }
+});
+
+
 app.listen(3000, () => {
     console.log("Bi Boooob bap connection is there")
 });
-
 
 
