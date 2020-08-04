@@ -45,7 +45,7 @@ app.use((err, req, res, next) => {
 
 // ERROR HANDLERS 404
 app.use((req, res, next) => {
-
+    res.locals.theerror = err;
 
     console.log("404");
     res.status(400).render('error.pug');
@@ -55,7 +55,7 @@ app.use((req, res, next) => {
 
 // ERROR HANDLERS 500
 app.use((req, res, next) => {
-
+    res.locals.theerror = err;
 
     console.log("500");
     res.status(500).render('error.pug');
