@@ -22,7 +22,7 @@ router.get('/about', (req, res) => {
 router.get('/:id', (req, res, next) => {
     res.locals.projects = projects;
 
-        // res.locals.projectinfo = projectinfo;
+       
     if (projects[req.params.id]) {
         res.render('project.pug', {
 

@@ -60,7 +60,7 @@ app.use((err, req, res, next) => {
 
 
 
-   res.locals.theerror = err; // wont i need to specify such that it can be used in pug?
+  // res.locals.theerror = err;  wont i need to specify such that it can be used in pug? if not where is err specified?
 
     if (err) {
         console.log('Global error handler called', err);
